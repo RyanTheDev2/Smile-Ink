@@ -5,7 +5,7 @@
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
     "outDir": "dist",               // output compiled files here
-    "noEmit": false,                // allow emitting JS
+    "noEmit": true,                // allow emitting JS
     "module": "ESNext",
     "target": "ES2020",             // set JS target
     "strict": true,
