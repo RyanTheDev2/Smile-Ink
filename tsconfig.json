@@ -4,8 +4,10 @@
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
-    "noEmit": true,
+    "outDir": "dist",               // output compiled files here
+    "noEmit": false,                // allow emitting JS
     "module": "ESNext",
+    "target": "ES2020",             // set JS target
     "strict": true,
     "lib": ["esnext", "dom", "dom.iterable"],
     "jsx": "preserve",
