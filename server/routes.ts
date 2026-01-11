@@ -13,6 +13,11 @@ export async function registerRoutes(
   app.get("/api/health", (_req, res) => {
     res.json({ status: "ok", timestamp: new Date().toISOString() });
   });
+
+  // Keep-alive route for UptimeRobot
+  app.get("/keep-alive", (_req, res) => {
+    res.status(200).send("I'm alive!");
+  });
   
   // Posts API
   app.get(api.posts.list.path, async (req, res) => {

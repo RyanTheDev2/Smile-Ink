@@ -7,7 +7,7 @@
     "outDir": "dist",               // output compiled files here
     "noEmit": true,
     "module": "ESNext",
-    "target": "ES2020",             // set JS target
+    "target": "ES2020",
     "strict": true,
     "lib": ["esnext", "dom", "dom.iterable"],
     "jsx": "preserve",
@@ -15,6 +15,8 @@
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
     "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "baseUrl": ".",
     "types": ["node", "vite/client"],
     "paths": {

@@ -61,7 +61,13 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  await startBot();
+  // Unified startup: Both bot and website routes are registered before listening
+  try {
+    await startBot();
+    log("Discord bot initialization started");
+  } catch (err) {
+    log(`Warning: Discord bot failed to start: ${err}`, "error");
+  }
 
   await registerRoutes(httpServer, app);
 
