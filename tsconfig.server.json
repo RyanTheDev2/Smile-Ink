@@ -4,6 +4,8 @@
   "exclude": ["client", "vite.config.ts"],
   "compilerOptions": {
     "module": "CommonJS",
-    "noEmit": false
+    "outDir": "dist",
+    "noEmit": false,
+    "types": ["node"]
   }
 }
