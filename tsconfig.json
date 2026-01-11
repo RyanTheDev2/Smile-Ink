@@ -1,12 +1,12 @@
 {
-  "include": ["client/src/**/*", "shared/**/*", "server/**/*"],
+  "include": ["client/src/**/*", "shared/**/*", "server/**/*", "index.ts"],
   "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
-    "outDir": "dist",               // output compiled files here
-    "noEmit": true,
-    "module": "ESNext",
+    "outDir": "dist",
+    "noEmit": false,                 // must emit JS for deployment
+    "module": "CommonJS",            // for Node.js
     "target": "ES2020",
     "strict": true,
     "lib": ["esnext", "dom", "dom.iterable"],
@@ -14,7 +14,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "baseUrl": ".",
