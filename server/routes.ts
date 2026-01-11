@@ -48,11 +48,6 @@ export async function registerRoutes(
     res.status(201).json(review);
   });
 
-  // Start Discord Bot
-  startBot().catch(err => {
-    console.error("Failed to start Discord bot:", err);
-  });
-
   // Seed Data
   await storage.seedTeamMembers();
 
