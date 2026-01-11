@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["server/**/*", "shared/**/*"],
+  "exclude": ["client", "vite.config.ts"],
+  "compilerOptions": {
+    "module": "CommonJS",
+    "noEmit": false
+  }
+}
