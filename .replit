@@ -1,3 +1,4 @@
+modules = ["nodejs-20"]
 [env]
 PORT = "5000"
 DISCORD_TOKEN = "$DISCORD_TOKEN"
@@ -10,5 +11,4 @@ run = ["node", "./dist/index.cjs"]
 build = ["npm", "run", "build"]
 
 modules = ["nodejs-20", "web", "postgresql-16"]
-run = "npm run dev"
 hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
