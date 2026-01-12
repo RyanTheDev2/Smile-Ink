@@ -12,3 +12,7 @@ build = ["npm", "run", "build"]
 
 modules = ["nodejs-20", "web", "postgresql-16"]
 hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80

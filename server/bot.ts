@@ -232,7 +232,7 @@ export async function startBot() {
             const logChannel = await client.channels.fetch(LOG_CHANNEL_ID) as TextChannel;
 
             const reviews = await storage.getReviewsByPost(post.id);
-            const avgRating = reviews.length ? reviews.reduce((a, b) => a + b.rating, 0) / reviews.length : 0;
+            const avgRating = reviews.length ? reviews.reduce((a: number, b: any) => a + (b.rating as number), 0) / reviews.length : 0;
 
             const postEmbed = new EmbedBuilder()
               .setTitle(post.title)
