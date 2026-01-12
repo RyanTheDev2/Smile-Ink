@@ -3,10 +3,12 @@
   "include": ["server/**/*", "shared/**/*"],
   "exclude": ["client", "vite.config.ts"],
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "outDir": "dist",
     "noEmit": false,
-    "types": ["node"]
+    "types": ["node"],
+    "skipLibCheck": true,
+    "esModuleInterop": true
   }
 }
